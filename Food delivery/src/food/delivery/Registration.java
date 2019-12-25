@@ -1,4 +1,5 @@
 package food.delivery;
+
 import java.util.Scanner;
 
 public class Registration extends Form {
@@ -9,7 +10,7 @@ public class Registration extends Form {
     private int ID;
     private static int numberOfObjects = 0;
     Scanner sc = new Scanner(System.in);
-    Database db;
+
     Registration() {
         form();
     }
@@ -22,7 +23,11 @@ public class Registration extends Form {
         super.setPassword(sc.next());
         System.out.println("Location: ");
         this.location = sc.next();
-
+        System.out.println("Enter 1 for Customer");
+        System.out.println("Enter 2 for Chef");
+        System.out.println("Enter 3 for Delivery guy");
+        sc.nextInt();
+        numberOfObjects++;
     }
 
     @Override
@@ -32,8 +37,7 @@ public class Registration extends Form {
 
     @Override
     public void commWithDb() {
-        db = Database.getInstance();
-        
+        System.out.println("DB: ");
     }
 
     public void setUsername(String username) {
