@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Registration extends Form {
 
+    private User u;
     private String username;
     private String password;
     private String location;
@@ -26,8 +27,37 @@ public class Registration extends Form {
         System.out.println("Enter 1 for Customer");
         System.out.println("Enter 2 for Chef");
         System.out.println("Enter 3 for Delivery guy");
-        sc.nextInt();
         numberOfObjects++;
+        boolean s = true;
+        while (s) {
+            s = false;
+            switch (sc.nextInt()) {
+                case 1:
+                    u = new Customer();
+
+                    break;
+                case 2:
+                    u = new Chef();
+                    u.setID(numberOfObjects);
+                    u.setLocation(this.location);
+                    u.setPassword(this.password);
+                    u.setUsername(this.username);
+                    break;
+                case 3:
+                    break;
+                default:
+                    System.out.println("Invalid number entered");
+                    s = true;
+
+            }
+            if (!s) {
+                u.setID(numberOfObjects);
+                u.setLocation(this.location);
+                u.setPassword(this.password);
+                u.setUsername(username);
+            }
+        }
+        this.commWithDb();
     }
 
     @Override
@@ -37,7 +67,7 @@ public class Registration extends Form {
 
     @Override
     public boolean commWithDb() {
-        System.out.println("DB: ");
+        Database.getInstance().addUser(u);
         return true;
     }
 

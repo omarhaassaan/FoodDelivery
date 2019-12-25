@@ -12,7 +12,8 @@ import java.util.Scanner;
  * @author Lenovo
  */
 public abstract class User {
-    private String username,password,location,ID;
+    private String username,password,location;
+    private int ID;
 
     User() {
     }
@@ -29,7 +30,7 @@ public abstract class User {
         return location;
     }
 
-    public String getID() {
+    public int getID() {
         return ID;
     }
 
@@ -46,7 +47,7 @@ public abstract class User {
         this.location = location;
     }
 
-    public void setID(String ID) {
+    public void setID(int ID) {
         this.ID = ID;
     }
 
