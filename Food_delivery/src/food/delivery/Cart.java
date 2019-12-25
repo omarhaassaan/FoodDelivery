@@ -26,6 +26,8 @@ public class Cart {
     }
 
     public void checkout() {
-
+        Order o = new Order();
+        o.setDishes(dishes);
+        OrderManager.getInstance().addOrder(o);
     }
 }

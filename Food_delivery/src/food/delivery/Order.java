@@ -11,7 +11,6 @@ public class Order {
     Scanner sc = new Scanner(System.in);
 
     Order() {
-        this.pay();
     }
 
     public void pay() {
@@ -44,5 +43,8 @@ public class Order {
     }
     public ArrayList<Dish> getDishes(){
         return this.dishes;
+    }
+    public void setDishes(ArrayList dishes){
+        this.dishes = dishes;
     }
 }
