@@ -19,9 +19,9 @@ public class OrderManager {
     }
 
     public void AssignDishes(Order o) {
-        ArrayList<Dish> dishes = o.getDishes();
-        for (int i = 0; i < dishes.size(); i++) {
-            Dish dish = dishes.get(i);
+        System.out.println("Assign Dishes");
+        for (int i = 0; i < o.getDishes().size(); i++) {
+            Dish dish = o.getDishes().get(i);
             Chef cf = ((Chef) Database.getInstance().users.get(dish.getChefID() - 1));
             cf.makeDish(dish);
         }
@@ -57,8 +57,7 @@ public class OrderManager {
                 }
             }
             if(x==j){
-                this.requestDeliveryGuy(this.orders.get(i));
-                this.finishedorders.add(this.orders.get(i));
+                this.addFinishedOrder(this.orders.get(i));
                 this.orders.remove(i);
             }
         }

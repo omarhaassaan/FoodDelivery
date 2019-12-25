@@ -14,7 +14,7 @@ public class Dish {
     Dish() {
         System.out.println(" ***************   Dish Information Form *****************");
         System.out.println("Dish Name: ");
-        this.name = sc.next();
+        this.name = sc.nextLine();
         System.out.println("Price: ");
         this.price = sc.nextDouble();
         System.out.println("Duration: ");

@@ -27,7 +27,10 @@ public class Cart {
 
     public void checkout() {
         Order o = new Order();
-        o.setDishes(dishes);
+        for (int i = 0; i < dishes.size(); i++) {
+            System.out.println("Dish " + i + dishes.get(i).getName());
+        }
+        o.setDishes(this.dishes);
         OrderManager.getInstance().addOrder(o);
     }
 }

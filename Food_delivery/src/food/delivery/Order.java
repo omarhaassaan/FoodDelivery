@@ -32,7 +32,7 @@ public class Order {
             }
         }
         this.calculateMoney();
-        this.payment.setAmount(totalMoney);
+        this.payment.setAmount(this.totalMoney);
         this.payment.pay();
     }
 
@@ -44,7 +44,9 @@ public class Order {
     public ArrayList<Dish> getDishes(){
         return this.dishes;
     }
-    public void setDishes(ArrayList dishes){
-        this.dishes = dishes;
+    public void setDishes(ArrayList<Dish> dishes){
+        for (int i = 0; i < dishes.size(); i++) {
+            this.dishes.add(dishes.get(i));
+        }
     }
 }

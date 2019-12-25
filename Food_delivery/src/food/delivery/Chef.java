@@ -13,7 +13,8 @@ import java.util.ArrayList;
  */
 public class Chef extends User {
     private boolean availability;
-    private ArrayList offerDish,opDish;
+    private ArrayList offerDish = new ArrayList();
+    private ArrayList opDish = new ArrayList();
     Chef(){
         
     }
@@ -39,6 +40,7 @@ public class Chef extends User {
         opDish.remove(opDish.indexOf(dish));
         dish.setFinished(true);
         System.out.println("Dish "+ dish.getName() + " Finished and ready");
+        OrderManager.getInstance().checkFinishing();
         
     }
 }
