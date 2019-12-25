@@ -11,7 +11,7 @@ public class Feedback {
     private int chefID;
     Scanner sc = new Scanner(System.in);
 
-    Feedback() {
+    public void setFeedback() {
         System.out.println("Enter the ID of the Chef you want to rate:");
         this.chefID = sc.nextInt();
         System.out.println("Enter the rate from 1 to 5:");

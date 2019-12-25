@@ -48,6 +48,8 @@ public class Customer extends User {
                 break;
             }
         }
+        operation = new MakeFeedback();
+        operation.execute();
     }
 
 }
