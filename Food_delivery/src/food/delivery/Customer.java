@@ -32,6 +32,7 @@ public class Customer extends User {
             System.out.println("Select dish to add to cart");
             index = cin.nextInt();
             operation = new AddToCart(index);
+            operation.execute();
             System.out.println("Press r to remove from cart");
             System.out.println("Press c to checkout");
             System.out.println("Press a to continue adding");
