@@ -18,11 +18,16 @@ public class FoodDelivery {
      */
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in);
-        System.out.println("Press 1 to sign up, press 2 to sign in");
-        if (cin.nextInt() == 1) {
-            Registration reg = new Registration();
-        } else if (cin.nextInt() == 2) {
-            Login log = new Login();
+        boolean s = true;
+        while (s) {
+            System.out.println("Press 1 to sign up, press 2 to sign in");
+            int choice = cin.nextInt();
+            if (choice == 1) {
+                Registration reg = new Registration();
+            } else if (choice == 2) {
+                Login log = new Login();
+                s = false;
+            }
         }
     }
 

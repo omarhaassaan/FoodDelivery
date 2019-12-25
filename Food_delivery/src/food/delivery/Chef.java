@@ -27,6 +27,9 @@ public class Chef extends User {
     public void makeDish (Dish dish){
         opDish.add(dish);
     }
+    public void finishDish(Dish dish){
+        opDish.remove(opDish.indexOf(dish));
+    }
     
     
     

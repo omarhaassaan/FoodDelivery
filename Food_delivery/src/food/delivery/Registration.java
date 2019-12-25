@@ -34,20 +34,17 @@ public class Registration extends Form {
             switch (sc.nextInt()) {
                 case 1:
                     u = new Customer();
-
                     break;
                 case 2:
                     u = new Chef();
-                    u.setID(numberOfObjects);
-                    u.setLocation(this.location);
-                    u.setPassword(this.password);
-                    u.setUsername(this.username);
                     break;
                 case 3:
+                    u = new DeliveryGuy();
                     break;
                 default:
                     System.out.println("Invalid number entered");
                     s = true;
+                    break;
 
             }
             if (!s) {
@@ -67,7 +64,7 @@ public class Registration extends Form {
 
     @Override
     public boolean commWithDb() {
-        Database.getInstance().addUser(u);
+        Database.getInstance().users.add(u);
         return true;
     }
 

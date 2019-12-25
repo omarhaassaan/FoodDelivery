@@ -19,7 +19,7 @@ public class Dish {
         this.price = sc.nextDouble();
         System.out.println("Duration: ");
         this.duration = sc.nextInt();
-        //this.chefID = Database.getInstance().Chef.getID();
+        this.chefID = Database.getInstance().getCurrentID();
     }
 
     public String getName() {

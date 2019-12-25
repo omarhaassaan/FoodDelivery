@@ -7,8 +7,9 @@ import java.util.ArrayList;
  */
 public class Database {
 
-    private static Database instance = null;
-    ArrayList<User> users = new ArrayList();
+    private int currentID;
+    private static Database instance = new Database();
+    ArrayList<User> users = new ArrayList<User>();
     ArrayList<Dish> dishes = new ArrayList();
     ArrayList<Feedback> feedbacks = new ArrayList();
 
@@ -21,7 +22,6 @@ public class Database {
         }
         return instance;
     }
-
     public void addUser(User u) {
         this.users.add(u);
     }
@@ -44,5 +44,11 @@ public class Database {
 
     public void removeFeedback(Feedback fb) {
         this.feedbacks.remove(fb);
+    }
+    public void setCurrentID(int currentID){
+        this.currentID = currentID;
+    }
+    public int getCurrentID(){
+        return this.currentID;
     }
 }
