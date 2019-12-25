@@ -20,10 +20,14 @@ public class Chef extends User {
     
     public void offerDish(Dish dish){
         offerDish.add(dish);
+        Database db = Database.getInstance();
+        db.addDish(dish);
     }
     
     public void makeDish (Dish dish){
         opDish.add(dish);
     }
+    
+    
     
 }

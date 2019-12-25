@@ -14,7 +14,6 @@ import java.util.Scanner;
 public abstract class User {
     private String username,password,location,ID;
 
-
     User() {
     }
 
@@ -25,7 +24,7 @@ public abstract class User {
     public String getPassword() {
         return password;
     }
-
+ 
     public String getLocation() {
         return location;
     }

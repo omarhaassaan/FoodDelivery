@@ -36,8 +36,9 @@ public class Registration extends Form {
     }
 
     @Override
-    public void commWithDb() {
+    public boolean commWithDb() {
         System.out.println("DB: ");
+        return true;
     }
 
     public void setUsername(String username) {

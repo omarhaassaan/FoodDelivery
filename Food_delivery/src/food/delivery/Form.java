@@ -20,7 +20,7 @@ public abstract class Form {
 
     public abstract  void getInfo();
 
-    public abstract void commWithDb();
+    public abstract boolean commWithDb();
 
     public String getUsername() {
         return username;

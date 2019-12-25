@@ -30,7 +30,13 @@ public class Login extends Form {
     }
 
     @Override
-    public void commWithDb() {
-
+    public boolean commWithDb() {
+        Database db = Database.getInstance();
+        for (int i = 0; i < db.users.size(); i++) {
+            if (db.users.get(1).getUsername() == getUsername() && db.users.get(1).getPassword()== getPassword()) {
+                return true;
+            }
+        }
+        return false;
     }
 }
