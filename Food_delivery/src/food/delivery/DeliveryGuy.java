@@ -6,6 +6,12 @@ public class DeliveryGuy extends User {
 
     public void acceptRequest(Order o) {
         System.out.println(this.getUsername() + " Got the Order of CustomerID " + Database.getInstance().getCurrentID());
+        this.orderDelivered(o);
+    }
+
+    public void orderDelivered(Order o) {
+        System.out.println("Order of CustomerID " + Database.getInstance().getCurrentID() + " Delivered Successfully");
+
     }
 
     @Override
