@@ -18,6 +18,12 @@ public class Chef extends User {
         
     }
     
+    @Override
+    public void profile(){
+       System.out.println("Welcome chef "+this.getUsername());
+       Dish d = new Dish();
+       offerDish(d);
+    }
     public void offerDish(Dish dish){
         offerDish.add(dish);
         Database db = Database.getInstance();
@@ -25,12 +31,11 @@ public class Chef extends User {
     }
     
     public void makeDish (Dish dish){
+        
         opDish.add(dish);
     }
+    
     public void finishDish(Dish dish){
         opDish.remove(opDish.indexOf(dish));
     }
-    
-    
-    
 }

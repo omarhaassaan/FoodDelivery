@@ -14,6 +14,7 @@ import java.util.Scanner;
  */
 public class Login extends Form {
 
+    public static int user = 0;
     private Scanner cin = new Scanner(System.in);
 
     Login() {
@@ -32,6 +33,7 @@ public class Login extends Form {
             if (commWithDb()) {
                 s = false;
                 System.out.println("Logged in successfully");
+                Database.getInstance().users.get(user).profile();
             } else {
                 System.out.println("Wrong Username or Password");
             }

@@ -17,6 +17,8 @@ public abstract class User {
 
     User() {
     }
+    
+    public abstract void profile();
 
     public String getUsername() {
         return username;
