@@ -14,7 +14,7 @@ public class Registration extends Form {
         form();
     }
 
-    public void RegisterForm() {
+    public void registerForm() {
         System.out.println(" ***************   Registration Form *****************");
         System.out.println("Username: ");
         super.setUsername(sc.nextLine());
@@ -57,7 +57,7 @@ public class Registration extends Form {
 
     @Override
     public void getInfo() {
-        this.RegisterForm();
+        this.registerForm();
     }
 
     @Override
