@@ -5,23 +5,25 @@
  */
 package food.delivery;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Lenovo
  */
 public class Chef extends User {
     private boolean availability;
-    
+    private ArrayList offerDish,opDish;
     Chef(){
         
     }
-
-    public boolean isAvailability() {
-        return availability;
+    
+    public void offerDish(Dish dish){
+        offerDish.add(dish);
     }
-
-    public void setAvailability(boolean availability) {
-        this.availability = availability;
+    
+    public void makeDish (Dish dish){
+        opDish.add(dish);
     }
     
 }
