@@ -10,15 +10,18 @@ public class Cash extends IPayment {
 
     @Override
     public void pay() {
-        System.out.println("Enter amount of cash payed :");
-        this.money = sc.nextDouble();
-        if (this.money > this.getAmount()) {
-            this.setWallet(this.money - this.getAmount());
-            System.out.println(this.wallet + "$ added to your wallet");
-        } else if (this.money == this.getAmount()) {
-
-        } else {
-            System.out.println("Unsufficient amount");
+        while (true) {
+            System.out.println("Enter amount of cash payed :");
+            this.money = sc.nextDouble();
+            if (this.money > this.getAmount()) {
+                this.setWallet(this.money - this.getAmount());
+                System.out.println(this.wallet + "$ added to your wallet");
+                break;
+            } else if (this.money == this.getAmount()) {
+                break;
+            } else {
+                System.out.println("Unsufficient amount");
+            }
         }
     }
 
