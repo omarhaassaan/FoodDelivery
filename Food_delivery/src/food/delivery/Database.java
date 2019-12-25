@@ -51,4 +51,9 @@ public class Database {
     public int getCurrentID(){
         return this.currentID;
     }
+
+    public ArrayList<Dish> getDishes() {
+        return dishes;
+    }
+    
 }
