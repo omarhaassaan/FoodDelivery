@@ -15,10 +15,9 @@ public class Menu {
     private ArrayList <Dish> dishes= new ArrayList();
     public void action(){
         Database db = Database.getInstance();
-        dishes =db.getDishes();
-        for (int i = 0; i < dishes.size(); i++) {
-            System.out.println(i + ") " + dishes.get(i).getName());
-            System.out.println(dishes.get(i).getPrice());
+        for (int i = 0; i < db.dishes.size(); i++) {
+            System.out.println(i + ") " + db.dishes.get(i).getName());
+            System.out.println(db.dishes.get(i).getPrice());
             System.out.println("---------------------------------");
         }
     }

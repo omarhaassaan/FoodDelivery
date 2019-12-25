@@ -52,8 +52,8 @@ public class Database {
         return this.currentID;
     }
 
-    public ArrayList<Dish> getDishes() {
-        return dishes;
-    }
+//    public ArrayList<Dish> getDishes() {
+//        return dishes;
+//    }
     
 }

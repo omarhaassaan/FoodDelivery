@@ -15,7 +15,7 @@ public class Customer extends User {
 
     private CustomerOperation operation;
     private Scanner cin = new Scanner(System.in);
-    int index=0;
+    int index;
     private String choice;
 
     @Override
@@ -32,7 +32,6 @@ public class Customer extends User {
             System.out.println("Select dish to add to cart");
             index = cin.nextInt();
             operation = new AddToCart(index);
-            index++;
             operation.execute();
             System.out.println("Press r to remove from cart");
             System.out.println("Press c to checkout");

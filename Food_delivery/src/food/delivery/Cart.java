@@ -13,16 +13,16 @@ import java.util.ArrayList;
  */
 public class Cart {
 
-    private ArrayList<Dish> dishes = new ArrayList();
+    private static ArrayList<Dish> dishes = new ArrayList();
 
     public void add(int index) {
         Database db = Database.getInstance();
-        dishes.add(db.getDishes().get(index));
+        dishes.add(db.dishes.get(index));
     }
 
     public void remove(int index) {
         Database db = Database.getInstance();
-        dishes.remove(db.getDishes().get(index));
+        dishes.remove(db.dishes.get(index));
     }
 
     public void checkout() {
@@ -32,5 +32,10 @@ public class Cart {
         }
         o.setDishes(this.dishes);
         OrderManager.getInstance().addOrder(o);
+        emptyCart();
+    }
+    
+    public void emptyCart(){
+        dishes.removeAll(dishes);
     }
 }
