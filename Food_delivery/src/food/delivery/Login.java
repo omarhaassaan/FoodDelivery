@@ -16,6 +16,7 @@ public class Login extends Form {
 
     public static int user = 0;
     private Scanner cin = new Scanner(System.in);
+    private int index;
 
     Login() {
         form();
@@ -33,6 +34,7 @@ public class Login extends Form {
             if (commWithDb()) {
                 s = false;
                 System.out.println("Logged in successfully");
+                Database.getInstance().users.get(index).profile();
             } else {
                 System.out.println("Wrong Username or Password");
             }
@@ -45,7 +47,7 @@ public class Login extends Form {
         for (int i = 0; i < Database.getInstance().users.size(); i++) {
             if (Database.getInstance().users.get(i).getUsername().compareTo(getUsername()) == 0 && Database.getInstance().users.get(i).getPassword().compareTo(getPassword()) == 0) {
                 Database.getInstance().setCurrentID(Database.getInstance().users.get(i).getID());
-                Database.getInstance().users.get(i).profile();
+                this.index=i;
                 return true;
             }
         }
