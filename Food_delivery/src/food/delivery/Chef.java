@@ -31,11 +31,14 @@ public class Chef extends User {
     }
     
     public void makeDish (Dish dish){
-        
         opDish.add(dish);
+        this.finishDish(dish);
     }
     
     public void finishDish(Dish dish){
         opDish.remove(opDish.indexOf(dish));
+        dish.setFinished(true);
+        System.out.println("Dish "+ dish.getName() + " Finished and ready");
+        
     }
 }
