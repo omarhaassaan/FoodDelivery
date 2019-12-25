@@ -13,17 +13,8 @@ import java.util.Scanner;
  */
 public abstract class User {
     private String username,password,location,ID;
-    Scanner cin = new Scanner(System.in);
-    Login log;
-    Registration reg;
     User(){
-        System.out.println("Press 1 to sign up, press 2 to sign in");
-        if(cin.nextInt()==1){
-            reg = new Registration();
-        }
-        else if(cin.nextInt()==2){
-            log = new Login();
-        }
+
     }
 
     public String getUsername() {
@@ -42,17 +33,6 @@ public abstract class User {
         return ID;
     }
 
-    public Scanner getCin() {
-        return cin;
-    }
-
-    public Login getLog() {
-        return log;
-    }
-
-    public Registration getReg() {
-        return reg;
-    }
 
     public void setUsername(String username) {
         this.username = username;
@@ -70,17 +50,6 @@ public abstract class User {
         this.ID = ID;
     }
 
-    public void setCin(Scanner cin) {
-        this.cin = cin;
-    }
-
-    public void setLog(Login log) {
-        this.log = log;
-    }
-
-    public void setReg(Registration reg) {
-        this.reg = reg;
-    }
     
     
 }
