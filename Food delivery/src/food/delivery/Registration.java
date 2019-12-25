@@ -9,7 +9,7 @@ public class Registration extends Form {
     private int ID;
     private static int numberOfObjects = 0;
     Scanner sc = new Scanner(System.in);
-
+    Database db;
     Registration() {
         form();
     }
@@ -32,8 +32,8 @@ public class Registration extends Form {
 
     @Override
     public void commWithDb() {
-
-        System.out.println("DB: ");
+        db = Database.getInstance();
+        
     }
 
     public void setUsername(String username) {

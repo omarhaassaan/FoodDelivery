@@ -18,7 +18,7 @@ public abstract class Form {
         commWithDb();
     }
 
-    public abstract void getInfo();
+    public abstract  void getInfo();
 
     public abstract void commWithDb();
 
