@@ -13,8 +13,9 @@ import java.util.Scanner;
  */
 public abstract class User {
     private String username,password,location,ID;
-    User(){
 
+
+    User() {
     }
 
     public String getUsername() {
@@ -50,6 +51,4 @@ public abstract class User {
         this.ID = ID;
     }
 
-    
-    
 }

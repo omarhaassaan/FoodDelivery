@@ -9,6 +9,6 @@ package food.delivery;
  *
  * @author omarh
  */
-public class Dish {
+public class Feedback {
     
 }
