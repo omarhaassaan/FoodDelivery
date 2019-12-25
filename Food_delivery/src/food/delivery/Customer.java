@@ -27,7 +27,8 @@ public class Customer extends User {
     }
 
     public void ordering() {
-        while (true) {
+        boolean ordering = true;
+        while (ordering) {
             System.out.println("Select dish to add to cart");
             index = cin.nextInt();
             operation = new AddToCart(index);
@@ -35,11 +36,11 @@ public class Customer extends User {
             System.out.println("Press c to checkout");
             System.out.println("Press a to continue adding");
             choice = cin.next();
-            if (choice == "c") {
+            if (choice.compareTo("c") == 0) {
                 operation = new Checkout();
                 operation.execute();
-                break;
-            } else if (choice == "r") {
+                ordering = false;
+            } else if (choice.compareTo("r") == 0) {
                 System.out.println("Select dish to be removed");
                 index = cin.nextInt();
                 operation = new RemoveFromCart(index);

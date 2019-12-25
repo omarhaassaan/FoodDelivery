@@ -17,11 +17,11 @@ public class Registration extends Form {
     public void RegisterForm() {
         System.out.println(" ***************   Registration Form *****************");
         System.out.println("Username: ");
-        super.setUsername(sc.next());
+        super.setUsername(sc.nextLine());
         System.out.println("Password: ");
-        super.setPassword(sc.next());
+        super.setPassword(sc.nextLine());
         System.out.println("Location: ");
-        this.location = sc.next();
+        this.location = sc.nextLine();
         System.out.println("Enter 1 for Customer");
         System.out.println("Enter 2 for Chef");
         System.out.println("Enter 3 for Delivery guy");

@@ -26,7 +26,6 @@ public class FoodDelivery {
                 Registration reg = new Registration();
             } else if (choice == 2) {
                 Login log = new Login();
-                s = false;
             }
         }
     }
