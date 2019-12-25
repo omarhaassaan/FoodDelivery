@@ -15,7 +15,8 @@ public class FoodDelivery {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Registration rg = new Registration();
+        Login lg = new Login();
     }
     
 }
