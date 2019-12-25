@@ -12,16 +12,17 @@ import java.util.Scanner;
  * @author Lenovo
  */
 public abstract class User {
-    private String username,password,location,ID;
+
+    private String username, password, location, ID;
     Scanner cin = new Scanner(System.in);
     Login log;
     Registration reg;
-    User(){
+
+    User() {
         System.out.println("Press 1 to sign up, press 2 to sign in");
-        if(cin.nextInt()==1){
+        if (cin.nextInt() == 1) {
             reg = new Registration();
-        }
-        else if(cin.nextInt()==2){
+        } else if (cin.nextInt() == 2) {
             log = new Login();
         }
     }
@@ -81,6 +82,5 @@ public abstract class User {
     public void setReg(Registration reg) {
         this.reg = reg;
     }
-    
-    
+
 }

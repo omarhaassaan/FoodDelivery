@@ -5,6 +5,8 @@
  */
 package food.delivery;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Lenovo
@@ -12,13 +14,17 @@ package food.delivery;
 
 public class Database {
     private  static Database instance = null;
+    ArrayList<User> users = new ArrayList();
+    ArrayList<Dish> dishes = new ArrayList();
+    ArrayList<Feedback> feedbacks = new ArrayList();
+    
     private Database (){
         
     }
-    
     public static Database getInstance(){
         if(instance == null)
             instance = new Database();
         return instance;
     }
+    
 }
