@@ -13,7 +13,7 @@ public abstract class Form {
 
     private String username, password;
 
-    Form() {
+    public void form() {
         getInfo();
         commWithDb();
     }
