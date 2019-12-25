@@ -44,7 +44,7 @@ public class Login extends Form {
         for (int i = 0; i < Database.getInstance().users.size(); i++) {
             System.out.println(Database.getInstance().users.get(i).getUsername());
             System.out.println(Database.getInstance().users.get(i).getPassword());
-            if (Database.getInstance().users.get(i).getUsername() == getUsername() && Database.getInstance().users.get(i).getPassword() == getPassword()) {
+            if (Database.getInstance().users.get(i).getUsername().compareTo(getUsername()) == 0 && Database.getInstance().users.get(i).getPassword().compareTo(getPassword()) == 0) {
                 Database.getInstance().setCurrentID(Database.getInstance().users.get(i).getID());
                 return true;
             }

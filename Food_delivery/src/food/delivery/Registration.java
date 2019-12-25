@@ -5,8 +5,6 @@ import java.util.Scanner;
 public class Registration extends Form {
 
     private User u;
-    private String username;
-    private String password;
     private String location;
     private int ID;
     private static int numberOfObjects = 0;
@@ -50,8 +48,8 @@ public class Registration extends Form {
             if (!s) {
                 u.setID(numberOfObjects);
                 u.setLocation(this.location);
-                u.setPassword(this.password);
-                u.setUsername(username);
+                u.setPassword(super.getPassword());
+                u.setUsername(super.getUsername());
             }
         }
         this.commWithDb();
@@ -68,14 +66,7 @@ public class Registration extends Form {
         return true;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
+    
     public void setLocation(String location) {
         this.location = location;
     }
@@ -88,13 +79,7 @@ public class Registration extends Form {
         Registration.numberOfObjects = numberOfObjects;
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
+    
 
     public String getLocation() {
         return location;
