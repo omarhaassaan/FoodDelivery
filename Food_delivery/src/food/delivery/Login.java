@@ -33,19 +33,19 @@ public class Login extends Form {
             if (commWithDb()) {
                 s = false;
                 System.out.println("Logged in successfully");
-                Database.getInstance().users.get(user+1).profile();
             } else {
                 System.out.println("Wrong Username or Password");
             }
         }
 
     }
-    
+
     @Override
     public boolean commWithDb() {
         for (int i = 0; i < Database.getInstance().users.size(); i++) {
             if (Database.getInstance().users.get(i).getUsername().compareTo(getUsername()) == 0 && Database.getInstance().users.get(i).getPassword().compareTo(getPassword()) == 0) {
                 Database.getInstance().setCurrentID(Database.getInstance().users.get(i).getID());
+                Database.getInstance().users.get(i).profile();
                 return true;
             }
         }
