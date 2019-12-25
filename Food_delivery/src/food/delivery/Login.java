@@ -22,6 +22,7 @@ public class Login extends Form {
 
     @Override
     public void getInfo() {
+        System.out.println(" ***************   Login Form *****************");
         System.out.println("Enter username");
         setUsername(cin.next());
         System.out.println("Enter password");
@@ -30,6 +31,6 @@ public class Login extends Form {
 
     @Override
     public void commWithDb() {
-        
+
     }
 }
