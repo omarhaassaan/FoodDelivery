@@ -25,7 +25,6 @@ public class Registration extends Form {
         System.out.println("Enter 1 for Customer");
         System.out.println("Enter 2 for Chef");
         System.out.println("Enter 3 for Delivery guy");
-        numberOfObjects++;
         boolean s = true;
         while (s) {
             s = false;
@@ -46,7 +45,7 @@ public class Registration extends Form {
 
             }
             if (!s) {
-                u.setID(numberOfObjects);
+                u.setID(Database.getInstance().users.size());
                 u.setLocation(this.location);
                 u.setPassword(super.getPassword());
                 u.setUsername(super.getUsername());
@@ -66,7 +65,6 @@ public class Registration extends Form {
         return true;
     }
 
-    
     public void setLocation(String location) {
         this.location = location;
     }
@@ -78,8 +76,6 @@ public class Registration extends Form {
     public static void setNumberOfObjects(int numberOfObjects) {
         Registration.numberOfObjects = numberOfObjects;
     }
-
-    
 
     public String getLocation() {
         return location;

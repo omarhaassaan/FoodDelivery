@@ -19,7 +19,6 @@ public class OrderManager {
     }
 
     public void AssignDishes(Order o) {
-        System.out.println("Assign Dishes");
         for (int i = 0; i < o.getDishes().size(); i++) {
             Dish dish = o.getDishes().get(i);
             Chef cf = ((Chef) Database.getInstance().users.get(dish.getChefID()));
