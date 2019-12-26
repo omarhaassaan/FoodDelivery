@@ -11,7 +11,7 @@ package food.delivery;
  */
 public class MakeFeedback implements CustomerOperation {
     
-    Feedback feedback = new Feedback ();
+    private Feedback feedback = new Feedback ();
     @Override
     public void execute() {
         feedback.setFeedback();
