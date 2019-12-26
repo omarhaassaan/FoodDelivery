@@ -39,8 +39,8 @@ public class Chef extends User {
     public void finishDish(Dish dish){
         opDish.remove(opDish.indexOf(dish));
         dish.setFinished(true);
-        System.out.println("Dish "+ dish.getName() + " Finished and ready");
         OrderManager.getInstance().checkFinishing();
+        System.out.println("Dish "+ dish.getName() + " Finished and ready");
         
     }
 }
